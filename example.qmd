@@ -1,0 +1,5 @@
+---
+title: "Show Code Example"
+---
+
+{{< showcode stan/test.stan >}}
