@@ -6,7 +6,16 @@ function showcode(args, kwargs)
 
     local fhandle = io.open(file)
     if not fhandle then return nil end
-    local content = fhandle:read "*a"
+
+    -- allow the user to skip lines, useful for skipping common preambles
+    local skips = tonumber(pandoc.utils.stringify(kwargs["skiplines"])) or 0
+    if skips > 0 then
+        for i=1,skips,1 do
+            local _ = fhandle:read("*line")
+        end
+    end
+
+    local content = fhandle:read("*a")
     fhandle:close()
 
     local language = pandoc.utils.stringify(kwargs["language"])

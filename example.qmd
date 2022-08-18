@@ -2,4 +2,22 @@
 title: "Show Code Example"
 ---
 
+It's easy to show a code file
+```{shortcodes="false"}
 {{< showcode stan/test.stan >}}
+```
+{{< showcode stan/test.stan >}}
+
+You can also skip lines
+```{shortcodes="false"}
+{{< showcode stan/test.stan skiplines=1 >}}
+```
+{{< showcode stan/test.stan skiplines=1 >}}
+
+
+Or override the default language highlighting
+```{shortcodes="false"}
+{{< showcode stan/test.stan language=ruby >}}
+```
+{{< showcode stan/test.stan language=ruby >}}
+
