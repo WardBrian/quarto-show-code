@@ -5,6 +5,10 @@ for displaying source code from a file in a document. This allows you to
 have a single source of truth for code examples and avoid duplication.
 
 ```
+quarto install extension WardBrian/quarto-show-code
+```
+
+```
 {{ showcode path/to/my/file.c }}
 ```
 
